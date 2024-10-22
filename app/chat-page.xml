@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page-content">
+  <ActionBar title="{{ chat.name }}" class="action-bar">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
+  </ActionBar>
+  <GridLayout rows="*, auto">
+    <ListView items="{{ messages }}" row="0">
+      <ListView.itemTemplate>
+        <StackLayout>
+          <Label text="{{ content }}" textWrap="true" class="{{ isSent ? 'chat-bubble chat-bubble-sent' : 'chat-bubble chat-bubble-received' }}" color="#ffffff" />
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+    <GridLayout columns="*, auto" row="1" class="p-2">
+      <TextField hint="Type a message" text="{{ messageText }}" class="chat-input" col="0" />
+      <Button text="Send" tap="onSendTap" class="send-button" col="1" />
+    </GridLayout>
+  </GridLayout>
+</Page>

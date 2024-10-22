@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page-content">
+  <ActionBar title="Chats" class="action-bar">
+    <ActionItem ios.position="right" android.position="actionBar">
+      <Label text="+" class="action-item" color="#ffffff" fontSize="24" />
+    </ActionItem>
+  </ActionBar>
+  <ListView items="{{ chats }}" itemTap="onChatTap" separatorColor="#333333">
+    <ListView.itemTemplate>
+      <GridLayout columns="auto, *" rows="auto, auto" class="chat-list-item">
+        <Label text="{{ name[0] }}" width="40" height="40" borderRadius="20" backgroundColor="#8b0000" color="#ffffff" fontSize="20" verticalAlignment="center" horizontalAlignment="center" row="0" col="0" rowSpan="2" marginRight="10" />
+        <Label text="{{ name }}" class="chat-list-item-name" row="0" col="1" />
+        <Label text="{{ lastMessage }}" class="chat-list-item-message" row="1" col="1" />
+      </GridLayout>
+    </ListView.itemTemplate>
+  </ListView>
+</Page>

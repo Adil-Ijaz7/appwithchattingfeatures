@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Add Note" icon="">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back"/>
+  </ActionBar>
+  <StackLayout class="p-4">
+    <TextField hint="Title" text="{{ title }}" class="input input-border"/>
+    <TextView hint="Content" text="{{ content }}" class="input input-border" height="200"/>
+    <Button text="Save" tap="onSaveTap" class="-primary"/>
+  </StackLayout>
+</Page>

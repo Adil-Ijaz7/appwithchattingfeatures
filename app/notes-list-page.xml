@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="My Notes" icon="">
+    <ActionItem tap="onAddNoteTap" ios.position="right" android.position="actionBar">
+      <Label text="+" class="action-item"/>
+    </ActionItem>
+  </ActionBar>
+  <ListView items="{{ notes }}" itemTap="onItemTap" class="list-group">
+    <ListView.itemTemplate>
+      <StackLayout class="list-group-item">
+        <Label text="{{ title }}" class="list-group-item-heading"/>
+        <Label text="{{ content }}" class="list-group-item-text" textWrap="true"/>
+      </StackLayout>
+    </ListView.itemTemplate>
+  </ListView>
+</Page>

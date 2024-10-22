@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.action-bar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.page-content {
+  background-color: #000000;
+}
+
+.chat-list-item {
+  padding: 16;
+  border-bottom-width: 1;
+  border-bottom-color: #333333;
+}
+
+.chat-list-item-name {
+  color: #ffffff;
+  font-size: 18;
+  font-weight: bold;
+}
+
+.chat-list-item-message {
+  color: #999999;
+  font-size: 14;
+}
+
+.chat-bubble {
+  border-radius: 10;
+  padding: 10;
+  margin: 5;
+  max-width: 80%;
+}
+
+.chat-bubble-sent {
+  background-color: #8b0000;
+  align-self: flex-end;
+}
+
+.chat-bubble-received {
+  background-color: #333333;
+  align-self: flex-start;
+}
+
+.chat-input {
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 20;
+  padding: 10;
+  margin: 10;
+}
+
+.send-button {
+  background-color: #8b0000;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 40;
+  height: 40;
+  font-size: 20;
+  text-align: center;
+  vertical-align: middle;
+}

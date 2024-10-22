@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="{{ title }}" icon="">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back"/>
+    <ActionItem tap="onShareTap" ios.position="right" android.position="actionBar">
+      <Label text="Share" class="action-item"/>
+    </ActionItem>
+  </ActionBar>
+  <ScrollView>
+    <StackLayout class="p-4">
+      <Label text="{{ content }}" textWrap="true" class="body"/>
+    </StackLayout>
+  </ScrollView>
+</Page>
